@@ -3,7 +3,7 @@ published: false
 title: "Repositories are not just for Databases"
 cover_image: "https://raw.githubusercontent.com/ndrone/dev.to/master/blog-posts/repositories-are-not-just-for-db/assets/cover.png"
 description: "A reminder that the repository (DAO) layer is not just for databases."
-tags: OOprogramming
+tags: oop
 series:
 canonical_url:
 ---
