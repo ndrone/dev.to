@@ -1,9 +1,9 @@
 ---
 published: false
-title: "Your title"
-cover_image: "https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-REPO/master/blog-posts/NAME-OF-YOUR-BLOG-POST/assets/your-asset.png"
-description: "Description of the article"
-tags: tag1, tag2, tag3
+title: "Repositories are not just for Databases"
+cover_image: "https://raw.githubusercontent.com/ndrone/dev.to/master/blog-posts/repositories-are-not-just-for-db/assets/cover.png"
+description: "A reminder that the repository (DAO) layer is not just for databases."
+tags: OOprogramming
 series:
 canonical_url:
 ---
