@@ -1,0 +1,31 @@
+name: Dev.to articles CI
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [11.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install, build
+      run: |
+        npm install
+        yarn run embedme:check
+    - name: deploy to dev.to
+      if: success()
+      run: |
+        DEV_TO_GIT_TOKEN=${{ secrets.DEV_TO_GIT_TOKEN }}
+        yarn run dev-to-git
