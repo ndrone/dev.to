@@ -50,19 +50,17 @@ If you've got some plugin to preview your markdown from your IDE, the images wil
 
 ## How to setup CI for auto deploying the blog posts?
 
-If you want to use Github and Travis, a `.travis.yml` file has been already prepared for you.
+If you want to use Github and GitHub Actions, a `.github/workflows/nodejs.yml` file has been already prepared for you.
 
-First, you have to activate the repository on Travis: https://travis-ci.org/account/repositories
-
-Then, you have to create a token on your dev.to account: https://dev.to/settings/account and set an environment variable on Travis called `DEV_TO_GIT_TOKEN` that will have the newly created token as value.
+Then, you have to create a token on your dev.to account: https://dev.to/settings/account and create a GitHub secret  `DEV_TO_GIT_TOKEN` that will have the newly created token as value.
 
 ## README template
 
 The following is simply a template that you may want to use for your own version of that repository.
 
-# \<YOUR NAME\>'s blog source
+# Nicholas Drone's blog source
 
-https://dev.to/\<YOUR DEV.TO NICKNAME\>
+https://dev.to/ndrone
 
 ## Blog posts
 

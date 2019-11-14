@@ -1,4 +1,4 @@
-name: Dev.to articles CI
+name: Dev.to Blog Source CI
 
 on:
   push:
