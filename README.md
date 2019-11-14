@@ -64,4 +64,4 @@ https://dev.to/ndrone
 
 ## Blog posts
 
-- [\<BLOG POST NAME\>](https://dev.to/\<BLOG POST LINK\>)
+- [Repositories are not just for Databases](https://dev.to/ndrone/repositories-are-not-just-for-databases-4a85)

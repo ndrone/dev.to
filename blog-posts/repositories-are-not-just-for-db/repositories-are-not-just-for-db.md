@@ -1,3 +1,13 @@
+---
+published: true
+title: "Repositories are not just for Databases"
+cover_image: "https://raw.githubusercontent.com/ndrone/dev.to/master/blog-posts/repositories-are-not-just-for-db/assets/cover.png"
+description: "A reminder that the repository (DAO) layer is not just for databases."
+tags: oop
+series:
+canonical_url: https://dev.to/ndrone/repositories-are-not-just-for-databases-4a85
+---
+
 ![Image of library modules](https://raw.githubusercontent.com/ndrone/dev.to/master/blog-posts/repositories-are-not-just-for-db/assets/libraryModules.png)
 
 Let's ignore the contact-core-test module for now. It contains a base test class. Each ContactRepository implementation test class can extend the base test class, and then only needs to write tests based on their implementation, but should pass all tests in the base class. I may turn that into a blog post of its own.
