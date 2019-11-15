@@ -8,6 +8,10 @@ series:
 canonical_url: https://dev.to/ndrone/repositories-are-not-just-for-databases-4a85
 ---
 
+This blog post came out of the necessity of my own mistake. I have been working strictly with databases longer than I care to admit to. So in a project, we were making changes so that a specific application didn't have direct database access to a different application. Simple separation of concerns right, and microservice architecture. All that jazz right? So I brought in an HttpClient into the service layer, removing the repository. It seemed right at the time. Not sure why, several weeks later this pattern was copied by may other developers on the project, and just turn that project to no longer a clean looking platform of microservices. Then one day it hit me. The HTTP crud operations were doing the same thing as the database operations. And both should be treated as a datastore. Whether the data lives in a file of any structure, HTTP request, and or database. The access to that data should all live in the repository layer. 
+
+The code in this blog can be seen [here](https://github.com/ndrone/repositoryisnotjustdatabase). The git repository as of writing this post contains a library module with several sub-modules. The idea is that the libraries are then used by the applications that have yet to be written to further explain why repositories are for **datastores** not just databases. 
+
 ![Image of library modules](https://raw.githubusercontent.com/ndrone/dev.to/master/blog-posts/repositories-are-not-just-for-db/assets/libraryModules.png)
 
 Let's ignore the contact-core-test module for now. It contains a base test class. Each ContactRepository implementation test class can extend the base test class, and then only needs to write tests based on their implementation, but should pass all tests in the base class. I may turn that into a blog post of its own.
